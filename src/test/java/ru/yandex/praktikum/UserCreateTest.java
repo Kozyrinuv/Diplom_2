@@ -41,7 +41,7 @@ public class UserCreateTest {
     public void creatingOKNewUserTest() {
         json = "{" + userLogin + "\"," + userName + "\"," + userPassword + "\"}";
         token = userClient.createUser(json)
-                .then()//.log().all()
+                .then()
                 .assertThat()
                 .statusCode(HTTP_OK)
                 .and()

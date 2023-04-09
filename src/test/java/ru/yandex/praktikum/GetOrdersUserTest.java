@@ -44,7 +44,7 @@ public class GetOrdersUserTest {
         OrderData ingredients = new OrderData(orderClient.getIngredientsListTest());
         orderClient.createOrder(ingredients, token.substring(7));
         orderClient.getOrdersWithAuthUser(token.substring(7))
-                .then()//.log().all()
+                .then()
                 .assertThat()
                 .statusCode(HTTP_OK)
                 .and()
